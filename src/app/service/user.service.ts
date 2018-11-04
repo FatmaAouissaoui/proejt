@@ -10,7 +10,7 @@ import { Observable } from 'rxjs/Rx';*/
 @Injectable()
 export class UserService {
   constructor(private http: HttpClient) { }
-  baseUrl: string = 'http://localhost:8080/user-portal/users';
+  baseUrl: string = 'http://localhost:8080/fournisseur/front/fournisseur/add';
 
   getUsers() {
     let fakeUsers = [{id: 1, firstName: 'Dhiraj', lastName: 'Ray', email: 'dhiraj@gmail.com'},
