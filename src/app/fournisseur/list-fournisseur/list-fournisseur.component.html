@@ -1,13 +1,13 @@
 <div class="col-md-6">
   <h2> Fournisseur Details</h2>
-  <button class="btn btn-danger" (click)="addFournisseur()"> Add Fournisseur</button>
+  <button class="btn btn-danger" (click)="addUFournisseur()"> Add Fournisseur</button>
   <table class="table table-striped">
     <thead>
     <tr>
       <th class="hidden">Id</th>
       <th>Nom</th>
-      <th>Email</th>
       <th>Adresse</th>
+      <th>Email</th>
       <th>Tel</th>
     </tr>
     </thead>
@@ -17,9 +17,10 @@
       <td></td>
       <td></td>
       <td></td>
-      <td><button class="btn btn-danger" (click)="deleteFournisseur(fournisseur)"> Delete</button>
-    <button class="btn btn-danger" (click)="editFournisseur(fournisseur)" style="margin-left: 20px;"> Edit</button></td>
+      <td><button class="btn btn-danger" (click)="deleteFournisseur(user)"> Delete</button>
+    <button class="btn btn-danger" (click)="editFournisseur(fournisseur)" style="margin-left: 20px;"> list</button></td>
     </tr>
     </tbody>
   </table>
 </div>
+

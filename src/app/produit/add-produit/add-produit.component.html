@@ -1,0 +1,24 @@
+<div class="col-md-6">
+  <h2 class="text-center">Add Produit</h2>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="email">Nom:</label>
+      <input type="email" formControlName="email" placeholder="Email" name="email" class="form-control" id="email">
+    </div>
+
+    <div class="form-group">
+      <label for="firstName">Quantité:</label>
+      <input formControlName="firstName" placeholder="First Name" name="firstName" class="form-control" id="firstName">
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">Prix:</label>
+      <input formControlName="lastName" placeholder="Last name" name="lastName" class="form-control" id="lastName">
+    </div>
+
+   
+
+    <button class="btn btn-danger" (click)="listeProduit()" type="submit"> envoyes</button>
+    <button class="btn btn-success" type="reset">return liste</button>
+  </form>
+</div>
