@@ -1,6 +1,6 @@
+<app-home></app-home>
 <div class="col-md-6">
-  <h2> Fournisseur Details</h2>
-  <button class="btn btn-danger" (click)="addUFournisseur()"> Add Fournisseur</button>
+  <!-- class="btn btn-danger" (click)="addUFournisseur()"> Add Fournisseur</button-->
   <table class="table table-striped">
     <thead>
     <tr>
@@ -14,13 +14,14 @@
     <tbody>
     <tr *ngFor="let fournisseur of fournisseurs">
       <td class="hidden"></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td><button class="btn btn-danger" (click)="deleteFournisseur(user)"> Delete</button>
-    <button class="btn btn-danger" (click)="editFournisseur(fournisseur)" style="margin-left: 20px;"> list</button></td>
-    </tr>
+      <td><a [routerLink]="['/add-fournisseur']"></a>{{fournisseur.id}}</td>
+      <td>{{fournisseur.nom}}</td>
+      <td>{{fournisseur.email}}</td>
+      <td>{{fournisseur.adresse}}</td>
+      <td>{{fournisseur.tel}}</td>
+     </tr>
     </tbody>
   </table>
+  <button mat-fab color="primary" style="margin-left: 35%" [routerLink]="['/add-fournisseur']" >Add</button>
 </div>
 

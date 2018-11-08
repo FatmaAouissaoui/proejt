@@ -9,18 +9,18 @@ import { Fournisseur } from 'src/app/model/fournisseur.model';
 })
 export class ListFournisseurComponent implements OnInit {
 
-  fournisseurs: Fournisseur[];
   constructor(private router: Router, private fournisseurService: FournisseurService) { }
+  fournisseurs : Array<Fournisseur>;
 
   ngOnInit() {
-    this.fournisseurService.getFournisseur()
+    this.fournisseurService.getAll()
     .subscribe( data => {
-      this.fournisseurs = data;
+      this.fournisseurs = data.json();
     });
 
   }
   deleteFournisseur(fournisseur: Fournisseur): void {
-    this.fournisseurService.deleteFournisseur(fournisseur.id)
+    this.fournisseurService.delete(fournisseur.id)
       .subscribe( data => {
         this.fournisseurs = this.fournisseurs.filter(u => u !== fournisseur);
       })

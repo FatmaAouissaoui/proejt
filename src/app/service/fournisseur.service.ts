@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {Fournisseur} from "../model/fournisseur.model";
+import { Observable } from 'rxjs/Observable';
 
 /*import 'rxjs/add/observable/of';
 import { Observable } from 'rxjs/Rx';*/
@@ -8,7 +9,32 @@ import { Observable } from 'rxjs/Rx';*/
   providedIn: 'root'
 })
 export class FournisseurService {
-  getournisseur: any;
+  
+  baseUrl: string = 'http://localhost:8080/fournisseur/front/fournisseur';
+
+  constructor(public http: HttpClient) { }
+
+  getAll(): Observable<any> {
+    return this.http.get(this.baseUrl + '/all');
+  }
+
+  get(id: number) {
+    return this.http.get(this.baseUrl + '/all/' + id);
+  }
+
+  delete(id : number){
+    return this.http.delete(this.baseUrl+ '/all/' + id);
+  }
+
+  save(fournisseur : any) : Observable<any> {
+    return this.http.post(this.baseUrl+ '/add', fournisseur);
+  }
+
+  update(fournisseur : any): Observable<any> {
+    return this.http.put(this.baseUrl+ '/all/' +  fournisseur.id, fournisseur);
+
+  }
+  /*getournisseur: any;
   getFournisseur(): any {
     throw new Error("Method not implemented.");
   }
@@ -47,5 +73,6 @@ export class FournisseurService {
 
   deleteFournisseur(id: number) {
     return this.http.delete(this.baseUrl + '/' + id);
-  }
+  }*/
+
 }

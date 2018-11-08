@@ -27,6 +27,9 @@ import { SupprimerProduitComponent } from './produit/supprimer-produit/supprimer
 import { ListProduitComponent } from './produit/list-produit/list-produit.component';
 import { FournisseurService } from './service/fournisseur.service';
 import { ProduitService } from './service/produit.service';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { HomeComponent } from './home/home.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +49,8 @@ import { ProduitService } from './service/produit.service';
     EditProduitComponent,
     ModfierProduitComponent,
     SupprimerProduitComponent,
-    ListProduitComponent
+    ListProduitComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +58,8 @@ import { ProduitService } from './service/produit.service';
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    MatSidenavModule
   ],
   providers: [AuthService, UserService,FournisseurService,ProduitService],
   bootstrap: [AppComponent]

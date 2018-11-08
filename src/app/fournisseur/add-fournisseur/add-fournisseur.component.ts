@@ -25,7 +25,7 @@ export class AddFournisseurComponent implements OnInit {
     });
   }
     onsubmit() {
-      this.fournisseurService.createFournisseur(this.addForm.value)
+      this.fournisseurService.save(this.addForm.value)
         .subscribe( data => {
           this.router.navigate(['list-fournisseur']);
         });
