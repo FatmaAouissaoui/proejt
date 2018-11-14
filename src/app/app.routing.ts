@@ -21,7 +21,7 @@ const routes: Routes = [
   { path: 'list-user', component: ListUserComponent },
   { path: 'edit-user', component: EditUserComponent },
 
-  { path: 'login', component: LoginComponent },
+
   { path: 'add-fournisseur', component: AddFournisseurComponent },
   { path: 'list-fournisseur', component: ListFournisseurComponent },
   { path: 'edit-fournisseur', component: EditFournisseurComponent },
@@ -29,7 +29,7 @@ const routes: Routes = [
   { path: 'supprimer-fournisseur', component: EditFournisseurComponent },
 
 
-  { path: 'login', component: LoginComponent },
+  
   { path: 'add-produit', component: AddProduitComponent },
   { path: 'list-produit', component: ListProduitComponent },
   { path: 'edit-produit', component: EditProduitComponent },

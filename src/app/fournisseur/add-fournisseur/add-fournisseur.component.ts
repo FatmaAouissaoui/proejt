@@ -24,7 +24,7 @@ export class AddFournisseurComponent implements OnInit {
       Tel: ['', Validators.required]
     });
   }
-    onsubmit() {
+  onSubmit() {
       this.fournisseurService.save(this.addForm.value)
         .subscribe( data => {
           this.router.navigate(['list-fournisseur']);

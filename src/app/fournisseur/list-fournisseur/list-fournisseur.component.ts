@@ -15,7 +15,7 @@ export class ListFournisseurComponent implements OnInit {
   ngOnInit() {
     this.fournisseurService.getAll()
     .subscribe( data => {
-      this.fournisseurs = data.json();
+      this.fournisseurs = data;   
     });
 
   }

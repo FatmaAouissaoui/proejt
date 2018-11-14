@@ -32,9 +32,9 @@ export class ListUserComponent implements OnInit {
     this.router.navigate(['edit-user']);
   };
 
-  addUser(): void {
+  /* addUser(): void {
     this.router.navigate(['add-user']);
-  };
+}; */
 }
 
 

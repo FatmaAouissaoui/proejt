@@ -18,9 +18,7 @@ export class FournisseurService {
     return this.http.get(this.baseUrl + '/all');
   }
 
-  get(id: number) {
-    return this.http.get(this.baseUrl + '/all/' + id);
-  }
+  
 
   delete(id : number){
     return this.http.delete(this.baseUrl+ '/all/' + id);

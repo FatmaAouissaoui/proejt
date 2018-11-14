@@ -30,6 +30,10 @@ import { ProduitService } from './service/produit.service';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { HomeComponent } from './home/home.component';
 
+import { MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule } from '@angular/material';
+import { LayoutModule } from '@angular/cdk/layout';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,7 +54,10 @@ import { HomeComponent } from './home/home.component';
     ModfierProduitComponent,
     SupprimerProduitComponent,
     ListProduitComponent,
-    HomeComponent
+    HomeComponent,
+    
+   
+
   ],
   imports: [
     BrowserModule,
@@ -59,7 +66,13 @@ import { HomeComponent } from './home/home.component';
     HttpClientModule,
     BrowserAnimationsModule,
     MaterialModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule,
+    LayoutModule
   ],
   providers: [AuthService, UserService,FournisseurService,ProduitService],
   bootstrap: [AppComponent]
